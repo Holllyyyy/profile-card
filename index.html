@@ -5,40 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+   
     <link rel="stylesheet" href="./css/index.css" />
 
     <title>Frontend Mentor | Profile card component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
+  
     </style>
   </head>
   <body>
     <main class="container">
       <div class="wrapper">
+        <div class="upbackpic"></div>
+        <div class="circle"><img src="./images/image-victor.jpg" alt="" class="circlepic"></div>
       <div class="name">
-        <h2 id="name">Victor Crest</h2>
-        <p class="age">26</p>
+        <h2 id="name">Victor Crest <span class="age"> 26</span></h2>
       </div>
 
       <div class="city"><p id="city">London</p></div>
       <div class="numbers">
-        <h1>80K</h1>
-        <h1>803K</h1>
-        <h1>1.4K</h1>
+        <h2>80K</h2>
+        <h2>803K</h2>
+        <h2>1.4K</h2>
       </div>
       <div class="sections" >
         <p class="foll">Followers</p>
@@ -46,12 +43,13 @@
         <p class="foll">Photos</p>
       </div>
       </div>
-      <footer class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Svetlana Jokic</a>.
-      </footer>
+   
     </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        > Frontend Mentor</a
+      >. Coded by <a href="https://github.com/Holllyyyy" target="_blank"> Svetlana Jokic</a>.
+    </footer>
   </body>
 </html>
