@@ -1,87 +1,269 @@
-# Frontend Mentor - Profile card component
+# Frontend Mentor - Profile card component solution
 
-![Design preview for the Profile card component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Profile card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+## Overview
 
-## The challenge
+Built Profile card with CSS and HTML. Body is centered. This project is so good to practice postioning of content on your page, and to improve more responsive design.
 
-Your challenge is to build out this profile card component and get it looking as close to the design as possible.
+### Screenshot
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+![mobile](design/mobile-ss.jpg)
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+![site](design/ss-desktop.png)
 
-## Where to find everything
+### Links
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+- Solution URL: [Add solution URL here](https://github.com/Holllyyyy/profile-card)
+- Live Site URL: [Add live site URL here](https://profile-card-component-holy.netlify.app/)
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+## My process
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+I started with writing basic HTML where I just added couple of divs. After it I moved on my style. I make css folder, and wrote basic css.
+I started with this:
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+```css
+@import url("https://fonts.google.com/specimen/Kumbh+Sans:wght@400;700&display=swap"); /*here is just google font Kumbh*/
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-gray: hsl(0, 0%, 59%);
+} /* just some colors what i used in this projects*/
 
-## Building your project
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+} /*some basics with '*' what will be applied at all elements */
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  background-color: var(--Dark-cyan);
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-position: right calc(47vw + 15%) bottom calc(65vh - 15vw), left
+      calc(40vw + 25%) top calc(72vh - 10vw);
+  background-repeat: no-repeat, no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem;
+} /* here I put min height n max with of 100 , added some background color and image  with some calculation how exactly i wanna my pictures to be locate %,vw,vh are relative lenghts , and more easier to use them 
+for better responsive webpage, than to use px who are absolute  lenghts, background to no-repeat , because i want to avoid repeating. display flex , because ots much easier for me, to 
+center element with some padding and margin to make it all looks*/
+.container {
+  max-width: 100vw;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} /* at frist i put how it would look for mobile view, than later for larger screen,i centered with flex */
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+.wrapper {
+  border-top: var(--Dark-cyan);
+  border-right: var(--Dark-cyan);
+  border-left: var(--Dark-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 90vw;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  background: #ffffff;
+} /*here also is at first how it should look for mobile, centered with flex, n some border with browser prefixes */
+.upbackpic {
+  background-image: url("../images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 80vw;
+  display: block;
+  border-radius: 1rem 1rem 0 0;
+  -webkit-border-radius: 1rem 1rem 0 0;
+  -moz-border-radius: 1rem 1rem 0 0;
+  -o-border-radius: 1rem 1rem 0 0;
+} /*upbackpic is child of wrapper so thats why width is like it, cause taking that space from it inside not actualy size, i put display block for picture cause its the only picture here*/
+.wrapper > .upbackpic {
+  width: 100%;
+  padding: 0 40% 40% 40%;
+}
+.circlepic {
+  width: 100%;
+  max-width: 100vw;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background-color: #ffffff;
+} /* this part here was challenge for me cause i ve never done something like this. border radius of 50% giving circle, */
+.circle {
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  margin-top: -60px;
+  max-width: 100%;
+  background-color: #ffffff;
+} /* why I put background color white( #ffffff) ?  Because I ran into problem on the moment 
+when I put picture inside it*/
 
-## Deploying your project
+.wrapper > .circle {
+  background-color: #ffffff;
+}
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+.wrapper > .name {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 1rem 1rem 0 1rem;
+  margin: 0 1rem 0rem 1rem;
+} /* just for name some space between them */
+.wrapper > .city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+  text-align: center;
+  padding-top: 8px;
+  margin: auto;
+  font-weight: 400;
+  color: var(--Dark-gray);
+} /*this is for city to be centered*/
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+.wrapper > .numbers {
+  border-top: 1px solid rgb(211, 209, 209);
+  padding-top: 2rem;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+} /* numbers -- here i put one line on top with border top */
+.numbers > h2 {
+  margin-left: 5%;
+}
+.numbers > h2:last-child {
+  margin-right: 5%;
+} /* I used this cause I wanted just last to move a little bit, because in my html i created div for just numbers and later next div for .sections(followers,likes,photos)*/
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+.wrapper > .sections {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: var(--Dark-gray);
+} /*here is that what i meantioned earlier with font-weight which is less than usual font,*/
+.sections > .foll {
+  margin-right: 5%;
+}
+.sections > .foll:nth-child(2) {
+  margin-right: 9%;
+} /*just moved again one with :nth-child()*/
 
-## Create a custom `README.md`
+.numbers {
+  font-size: 1, 125rem;
+  font-weight: 700;
+  color: var(--Very-dark-desaturated-blue);
+} /*i changed from px to rem for better responsive text*/
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+#name {
+  font-size: 1, 125rem;
+  font-weight: 700;
+  color: var(--Very-dark-desaturated-blue);
+}
+.age {
+  color: var(--Dark-gray);
+  font-weight: 400;
+}
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+/* its just class for my footer*/
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+.attribution a {
+  color: hsl(300, 93%, 16%);
+}
 
-## Submitting your solution
+@media screen and (min-width: 900px) {
+  .container {
+    width: 26vw;
+    height: 26vh;
+  }
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+  .wrapper {
+    width: 100%;
+    max-width: 180vw;
+  }
+}
+/*here i used media for larger screen of minimum 900px, what will be applid for larger screens from 900px, so become all responsive for larger screens*/
+```
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+### Built with
 
-## Sharing your solution
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
 
-There are multiple places you can share your solution:
+### What I learned
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+While working on this project I learned more about positioning and how to use with more confidence flexbox. And I learned how much is important to choose good font-weight, size and family as well... They're making website prettier, than when is without it.Also I learnt to use more relative lenghts than absolute. How to make page be more responsive. And I started with mobile-first workflow, so by doing @media I make it responsive more for larger screens.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+### Continued development
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+I will continue next with Social proof section project, from Frontend Mentor. I want to practice and improve my HTML and CSS skills.
 
-## Got feedback for us?
+### Useful resources
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+- [Conquering Responsive Layouts](https://courses.kevinpowell.co/view/courses/conquering-responsive-layouts) - This helped me for responsive design. I really liked this pattern and will use it going forward.
+- [Responsive Web Design: Using Fonts Responsively](https://www.sitepoint.com/understanding-responsive-web-design-how-to-manage-fonts/) - This is an amazing article which helped me finally understand more about how to use fonts responsively. I'd recommend it to anyone still learning this concept.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+## Author
 
-**Have fun building!** 🚀
+- Website - [Svetlana Jokic](https://my-portfolio-hollyy.netlify.app/)
+- Frontend Mentor - [@Holllyyyy](https://www.frontendmentor.io/profile/Holllyyyy)
+- Twitter - [@svetlanajokic](https://twitter.com/svetlanajokic)
+  -LinkedIn - [@Svetlana Jokic](https://www.linkedin.com/in/svetlana-jokic-787432100/)
+
+## Acknowledgments
+
+Thanks to my team:
+[@aemrobe](https://github.com/aemrobe)
+[@bertyruan](https://github.com/bertyruan)
+It's been great experience to work with team,to help to each other by giving tips and feedbacks.

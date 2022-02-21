@@ -17,13 +17,12 @@
 
 body {
   min-height: 100vh;
-
+  max-width: 100%;
   background-color: var(--Dark-cyan);
-  background-image: url("/images/bg-pattern-top.svg"),
-    url("/images/bg-pattern-bottom.svg");
-  /*background-position: top -500px left -300px, 750px 350px;*/
-  background-position: right calc(47vw + 15%) bottom calc(65vh - 15vw), left calc(40vw + 25%) top calc(72vh - 10vw);
-
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-position: right calc(47vw + 15%) bottom calc(65vh - 15vw),
+    left calc(40vw + 25%) top calc(72vh - 10vw);
   background-repeat: no-repeat, no-repeat;
   display: flex;
   align-items: center;
@@ -33,8 +32,9 @@ body {
   margin: 1rem;
 }
 .container {
-  width: 26vw;
-  height: 26vh;
+  max-width: 100vw;
+  width: 100%;
+  min-height: 100vh;
   margin-top: auto;
   margin-bottom: auto;
   display: flex;
@@ -51,9 +51,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
-  max-width: 180vw ;
-
+  width: 90%;
+  max-width: 90vw;
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
@@ -93,8 +92,8 @@ body {
   -webkit-border-radius: 50%;
   margin-top: -60px;
   max-width: 100%;
+  background-color: #ffffff;
 }
-
 .wrapper > .circle {
   background-color: #ffffff;
 }
@@ -151,12 +150,12 @@ body {
 .sections > .foll:nth-child(2) {
   margin-right: 9%;
 }
-
 .numbers {
   font-size: 1, 125rem;
   font-weight: 700;
   color: var(--Very-dark-desaturated-blue);
 }
+
 #name {
   font-size: 1, 125rem;
   font-weight: 700;
@@ -170,36 +169,20 @@ body {
 .attribution {
   font-size: 14px;
   text-align: center;
-
 }
 
 .attribution a {
   color: hsl(300, 93%, 16%);
 }
 
-@media screen and (max-width:500px){
-  .numbers,.sections .foll{
-    display:flex ;
-    justify-content: center;
-    align-items: center;
-  
-    font-size: smaller;
-    font-weight: 200;
-    margin: 0;
+@media screen and (min-width: 900px) {
+  .container {
+    width: 26vw;
+    height: 26vh;
   }
-  .sections{
-      margin-bottom: 1rem;
 
+  .wrapper {
+    width: 100%;
+    max-width: 180vw;
+  }
 }
-.circlepic{
-  margin:auto;
-}
-.name,.city{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-}
-
-
