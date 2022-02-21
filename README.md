@@ -5,7 +5,6 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 ## Table of contents
 
 - [Overview](#overview)
-
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -28,8 +27,8 @@ Built Profile card with CSS and HTML. Body is centered. This project is so good 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Holllyyyy/profile-card)
-- Live Site URL: [Add live site URL here](https://profile-card-component-holy.netlify.app/)
+- Solution URL: [https://github.com/Holllyyyy/profile-card](https://github.com/Holllyyyy/profile-card)
+- Live Site URL: [https://profile-card-component-holy.netlify.app/](https://profile-card-component-holy.netlify.app/)
 
 ## My process
 
